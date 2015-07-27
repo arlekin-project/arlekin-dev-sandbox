@@ -10,11 +10,10 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd $DIR
 
-git pull git@github.com:bmichalski/arlekin-core.git
-git pull git@github.com:bmichalski/arlekin-dbal.git
-git pull git@github.com:bmichalski/arlekin-dbal-driver-pdo-mysql.git
-git pull git@github.com:bmichalski/arlekin-dbal-migration.git
-git pull git@github.com:bmichalski/arlekin-dbal-migration-driver-pdo-mysql.git
-git pull git@github.com:bmichalski/arlekin-dml.git
-git pull git@github.com:bmichalski/arlekin-dml-driver-pdo-mysql.git
-git pull git@github.com:bmichalski/docker-arlekin-dev-sandbox.git
+source $DIR/common.sh
+
+for REPOSITORY in $ARLEKIN_REPOSITORIES
+do
+  cd $DIR/$REPOSITORY && \
+  git pull git@github.com:bmichalski/$REPOSITORY.git
+done
