@@ -21,12 +21,12 @@ git clone git@github.com:bmichalski/docker-arlekin-dev-sandbox.git
 
 cd docker-arlekin-dev-sandbox
 
-ARLEKIN_FOLDERS='arlekin-core 
-arlekin-dbal 
-arlekin-dbal-driver-pdo-mysql 
-arlekin-dbal-migration 
-arlekin-dbal-migration-driver-pdo-mysql 
-arlekin-dml 
+ARLEKIN_FOLDERS='arlekin-core
+arlekin-dbal
+arlekin-dbal-driver-pdo-mysql
+arlekin-dbal-migration
+arlekin-dbal-migration-driver-pdo-mysql
+arlekin-dml
 arlekin-dml-driver-pdo-mysql'
 
 mkdir -p arlekin
