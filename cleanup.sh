@@ -10,14 +10,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd $DIR
 
-ARLEKIN_FOLDERS='arlekin-core
-arlekin-dbal
-arlekin-dbal-driver-pdo-mysql
-arlekin-dbal-migration
-arlekin-dbal-migration-driver-pdo-mysql
-arlekin-dml
-arlekin-dml-driver-pdo-mysql
-docker-arlekin-dev-sandbox'
+source $DIR/common.sh
 
 for FOLDER in $ARLEKIN_FOLDERS
 do
