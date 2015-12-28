@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARLEKIN_PHP_SOURCE_FOLDERS='arlekin-core
+ARLEKIN_PHP_SOURCE_FOLDERS='arlekin-common
 arlekin-dbal
 arlekin-dbal-driver-pdo-mysql
 arlekin-dbal-migration
