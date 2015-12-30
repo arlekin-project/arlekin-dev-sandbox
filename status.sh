@@ -2,21 +2,13 @@
 
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-ARLEKIN_FOLDERS='arlekin-common
-arlekin-dbal
-arlekin-dbal-driver-pdo-mysql
-arlekin-dbal-migration
-arlekin-dbal-migration-driver-pdo-mysql
-arlekin-dml
-arlekin-dml-driver-pdo-mysql'
+source $DIR/common.sh
 
-VOLUMES=""
-
-for FOLDER in $ARLEKIN_FOLDERS
+for REPOSITORY in $ARLEKIN_REPOSITORIES
 do
-  ARLEKIN_REPO=$DIR/$FOLDER
-  echo "Changing directory: $ARLEKIN_REPO"
-  cd $ARLEKIN_REPO && git status
+  ARLEKIN_REPOSITORY_FULLPATH=$DIR/$REPOSITORY
+  echo "Changing directory: $ARLEKIN_REPOSITORY_FULLPATH"
+  cd $ARLEKIN_REPOSITORY_FULLPATH && git status
 done
 
 

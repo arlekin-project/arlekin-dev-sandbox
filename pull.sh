@@ -15,5 +15,5 @@ source $DIR/common.sh
 for REPOSITORY in $ARLEKIN_REPOSITORIES
 do
   cd $DIR/$REPOSITORY && \
-  git pull git@github.com:bmichalski/$REPOSITORY.git
+  git pull git@github.com:arlekin-project/$REPOSITORY.git
 done
