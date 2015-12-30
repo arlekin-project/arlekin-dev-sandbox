@@ -1,6 +1,7 @@
 *
-!.gitignore
-!common.sh
-!clone.sh
-!pull.sh
-!cleanup.sh
+!/.gitignore
+!/common.sh
+!/clone.sh
+!/pull.sh
+!/cleanup.sh
+!/status.sh
