@@ -2,6 +2,8 @@
 
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
+git status
+
 source $DIR/common.sh
 
 for REPOSITORY in $ARLEKIN_REPOSITORIES
