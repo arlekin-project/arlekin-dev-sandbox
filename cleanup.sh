@@ -14,5 +14,8 @@ source $DIR/common.sh
 
 for FOLDER in $ARLEKIN_FOLDERS
 do
-  sudo rm -rf $DIR/$FOLDER
+  rm -rf $DIR/$FOLDER
 done
+
+rm -rf $DIR/arlekin
+

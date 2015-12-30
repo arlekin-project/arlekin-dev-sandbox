@@ -17,13 +17,12 @@ do
     git clone git@github.com:arlekin-project/$REPOSITORY.git
 done
 
-cd docker-arlekin-dev-sandbox
-
-mkdir -p arlekin
-
+cd docker-arlekin-dev && \
+rm -rf arlekin && \
+mkdir -p arlekin && \
 cd arlekin
 
-for FOLDER in $ARLEKIN_PHP_SOURCE_FOLDERS
+for FOLDER in $ARLEKIN_FOLDERS
 do
   ln -s ../../$FOLDER $FOLDER
 done
