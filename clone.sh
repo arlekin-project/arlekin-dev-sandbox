@@ -12,7 +12,7 @@ cd $DIR
 
 source $DIR/common.sh
 
-for REPOSITORY in $ARLEKIN_REPOSITORIES
+for REPOSITORY in $REPOSITORIES
 do
     git clone git@github.com:arlekin-project/$REPOSITORY.git
 done
@@ -22,7 +22,7 @@ rm -rf arlekin && \
 mkdir -p arlekin && \
 cd arlekin
 
-for FOLDER in $ARLEKIN_FOLDERS
+for FOLDER in $FOLDERS
 do
   ln -s ../../$FOLDER $FOLDER
 done
