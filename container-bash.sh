@@ -41,11 +41,13 @@ ID_RSA_PUB=$(cat ~/.ssh/id_rsa.pub) && \
 CREATE_DOT_SSH_DIR_CMD="mkdir -p /home/r/.ssh" && \
 CREATE_AUTHORIZED_KEYS_CMD="echo '$ID_RSA_PUB' > /home/r/.ssh/authorized_keys" && \
 CHOWN_DOT_SSH_DIR_CMD="chown -R r:r /home/r/.ssh" && \
+MKDIR_DBAL_DIR_CMD="mkdir -p /home/r/dbal" && \
 CHOWN_DBAL_DIR_CMD="chown r:r /home/r/dbal" && \
 CREATE_SUDO_AS_ADMIN_SUCCESS_FILE="touch /home/r/.sudo_as_admin_successful" && \
 dockerExec "$PHP_CONTAINER_NAME" "$CREATE_DOT_SSH_DIR_CMD" && \
 dockerExec "$PHP_CONTAINER_NAME" "$CREATE_AUTHORIZED_KEYS_CMD" && \
 dockerExec "$PHP_CONTAINER_NAME" "$CHOWN_DOT_SSH_DIR_CMD" && \
+dockerExec "$PHP_CONTAINER_NAME" "$MKDIR_DBAL_DIR_CMD" && \
 dockerExec "$PHP_CONTAINER_NAME" "$CHOWN_DBAL_DIR_CMD" && \
 dockerExec "$PHP_CONTAINER_NAME" "$CREATE_SUDO_AS_ADMIN_SUCCESS_FILE" && \
 ssh \
