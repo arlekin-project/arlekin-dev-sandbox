@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Get current file parent directory
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do
   DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
@@ -8,9 +9,9 @@ while [ -h "$SOURCE" ]; do
 done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-cd $DIR
-
 source $DIR/common.sh
+
+cd $DIR
 
 for REPOSITORY in $REPOSITORIES
 do

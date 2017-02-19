@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Get current file parent directory
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do
   DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
@@ -8,19 +9,19 @@ while [ -h "$SOURCE" ]; do
 done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-cd $DIR
-
 source $DIR/common.sh
+
+cd $DIR
 
 for REPOSITORY in $REPOSITORIES
 do
     git clone git@github.com:$GIT_ORGANIZATION/$REPOSITORY.git
 done
 
-cd docker-arlekin-dev && \
-rm -rf arlekin && \
-mkdir -p arlekin && \
-cd arlekin
+cd $DOCKER_DEV_REPOSITORY_FULLPATH && \
+rm -rf $PROJECT_NAME && \
+mkdir -p $PROJECT_NAME && \
+cd $PROJECT_NAME
 
 for FOLDER in $FOLDERS
 do
