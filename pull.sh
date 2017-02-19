@@ -12,7 +12,7 @@ cd $DIR
 
 source $DIR/common.sh
 
-for REPOSITORY in $ARLEKIN_REPOSITORIES
+for REPOSITORY in $REPOSITORIES
 do
   cd $DIR/$REPOSITORY && \
   git pull git@github.com:arlekin-project/$REPOSITORY.git
