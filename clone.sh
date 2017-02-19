@@ -15,7 +15,7 @@ cd $DIR
 
 for REPOSITORY in $REPOSITORIES
 do
-    git clone git@github.com:$GIT_ORGANIZATION/$REPOSITORY.git
+    git clone git@github.com:$GITHUB_ORGANIZATION/$REPOSITORY.git
 done
 
 cd $DOCKER_DEV_REPOSITORY_FULLPATH && \

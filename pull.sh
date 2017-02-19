@@ -16,5 +16,5 @@ cd $DIR
 for REPOSITORY in $REPOSITORIES
 do
   cd $DIR/$REPOSITORY && \
-  git pull git@github.com:$GIT_ORGANIZATION/$REPOSITORY.git
+  git pull git@github.com:$GITHUB_ORGANIZATION/$REPOSITORY.git
 done

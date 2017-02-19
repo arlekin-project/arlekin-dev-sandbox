@@ -1,8 +1,2 @@
-*
-!/.gitignore
-!/common.sh
-!/clone.sh
-!/pull.sh
-!/status.sh
-!/run.sh
-!/container-bash.sh
+/docker-dev
+/dbal

@@ -14,6 +14,5 @@ source $DIR/common.sh
 cd $DOCKER_DEV_REPOSITORY_FULLPATH && \
 export SSH_PORT=2222 && \
 export MYSQL_ROOT_PASSWORD=root && \
-docker-compose build && \
-docker-compose up
-
+docker-compose -p $PROJECT_NAME build && \
+docker-compose -p $PROJECT_NAME up
