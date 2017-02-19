@@ -5,4 +5,4 @@
 !/pull.sh
 !/status.sh
 !/run.sh
-!/connect.sh
+!/container-bash.sh
