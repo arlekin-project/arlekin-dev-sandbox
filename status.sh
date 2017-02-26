@@ -27,5 +27,3 @@ do
   echo "Changing directory: $REPOSITORY_FULLPATH"
   cd $REPOSITORY_FULLPATH && git status
 done
-
-
