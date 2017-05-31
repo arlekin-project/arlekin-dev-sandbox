@@ -1,5 +1,4 @@
 # Workspace
 
-## Working with an IDE
-When creating a project in an IDE,
-both `dbal` and `docker-dev` subfolders should be excluded from indexing.
+## IDE with indexing feature
+Both `dbal` and `docker-dev` folders should be excluded from indexing.
